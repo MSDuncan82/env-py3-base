@@ -23,7 +23,7 @@ RUN apt-get update \
     #
     ## pip installs
     && pip3 install \
-        pylint \
+        mypy \
         boto3 \
         python-dotenv \
         ipdb \
