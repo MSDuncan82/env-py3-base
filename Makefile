@@ -29,7 +29,7 @@ requirements:
 setup: term aws ipython
 
 ipython:
-	mv .ipython ~/.
+	cp -r .ipython ~/.
 
 term:
 	bash/set_dotfiles.sh

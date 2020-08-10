@@ -1,4 +1,5 @@
-FROM continuumio/anaconda3
+ARG VARIANT=3.8
+FROM mcr.microsoft.com/vscode/devcontainers/python:${VARIANT}
 
 RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
@@ -21,15 +22,13 @@ RUN apt-get update \
         telnet \
     #
     ## pip installs
-    && /opt/conda/bin/pip install \
+    && pip3 install \
         pylint \
         boto3 \
         python-dotenv \
         ipdb \
         black \
         psycopg2 \
-        catboost \
-        xgboost \
         fastapi \
         uvicorn \
         nb_black \
